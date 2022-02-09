@@ -53,13 +53,14 @@ document.write(goodT + "<br>"); // gehen auch mehrere umtausche?
 
 
 const satz = "Sam is going to codingschool";
-const newerSatz = satz.replace("Sam", "sam").replace("to", "at").replace("codingschool", "school")
+const satz1 = satz.replace("codingschool", "school");
+const newerSatz = satz.replace("to", "at").replace("codingschool", "school");
 const satz3 = satz.replace("Sam", "SAM").replace("codingschool", "SCHOOL");
 const Four = satz.replace("Sam", "sam").replace("is","IS").replace("going","GOING").replace("to","TO").replace("codingschool", "school");
 const five = satz.replace("is","Is").replace("going","Going").replace("to","To").replace("codingschool","School")
 
-document.write(satz.toUpperCase() + "<br>");
-document.write(newerSatz + "<br>");
+document.write(satz1.toUpperCase() + "<br>");
+document.write(newerSatz.toLowerCase() + "<br>");
 document.write(satz3 + "<br>");
 document.write(Four + "<br>");
 document.write(five + "<br>");
