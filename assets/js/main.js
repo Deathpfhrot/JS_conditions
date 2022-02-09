@@ -65,6 +65,110 @@ document.write(satz3 + "<br>");
 document.write(Four + "<br>");
 document.write(five + "<br>");
 
+//kürzere Lösung?
+
+
+console.log("---------------------------------");
+
+//JS Vertiefung - Template Literals
+//lev1_1 
+
+let vorname1 = "Markus"
+let nachname1 = "Schiller"
+let alter = 29
+let ort = "Treuchtlingen"
+let größe = "185cm"
+let gewicht = "85kg"
+
+let filler = document.getElementById('fillMe')
+
+
+console.log("Mein Vorname ist: " + vorname1 + " mein Nachname lautet: " + nachname1 + " ich bin " + alter + " Jahre alt und komme aus " + ort + "<br>");
+document.write("Mein Vorname ist: " + vorname1 + "<br>" + " Mein Nachname lautet: " + nachname1 + "<br> Ich bin " + alter + " Jahre alt und komme aus " + ort);
+
+console.log(`Ich bin ${alter} Jahre alt, und wiege um die ${gewicht} bin aber dafür ${größe} groß.`)
+
+filler.innerHTML = `<br>Ich bin ${alter} Jahre alt, und wiege um die ${gewicht} bin aber dafür ${größe} groß.`;
+
+// document.write(`<br>Ich bin ${alter} Jahre alt, und wiege um die ${gewicht} bin aber dafür ${größe} groß.`)
+
+
+console.log("-------------------------------");
+// lev1_2: template-literals
+
+
+// Brain Damage Songtext
+// The lunatic is on the grass
+// The lunatic is on the grass
+// Remembering games and daisy chains and laughs
+// Got to keep the loonies on the path
+
+// The lunatic is in the hall
+// The lunatics are in my hall
+// The paper holds their folded faces to the floor
+// And every day the paperboy brings more
+
+
+// And if the dam breaks open many years too soon
+// And if there is no room upon the hill
+// And if your head explodes with dark forebodings too
+// I'll see you on the dark side of the moon
+
+// The lunatic is in my head
+// The lunatic is in my head
+// You raise the blade, you make the change
+// You rearrange me 'til I'm sane
+// You lock the door
+// And throw away the key
+// There's someone in my head but it's not me
+
+// And if the cloud bursts, thunder in your ear
+// You shout and no one seems to hear
+// And if the band you're in starts playing different tunes
+// I'll see you on the dark side of the moon
+
+
+let lunatic = "lunatic is";
+let darkSide = "I'll see you on the dark side of the moon";
+let hall = "hall";
+let head = "in my head";
+let door = "You lock the door";
+let paperboy = "paperboy";
+let and = "And";
+let the = "The";
+let song = document.getElementById("song")
+
+song.innerHTML = `
+<h1>Brain Damage Songtext</h1>
+<p>${the} ${lunatic} on the grass<br>
+${the} ${lunatic} on the grass<br>
+Remembergin games and daisy chains and laughs<br>
+Got to keep the loonies on the path</p>
+
+<p>${the} ${lunatic} in the ${hall}<br>
+${the} lunatics are in my ${hall}<br>
+${the} ${paperboy} holds their folded faces to the floor<br>
+${and} every day the ${paperboy} brings more</p>
+
+<p>${and} if the dam breaks open many years too soon<br>
+${and} if there is no room upon the hill<br>
+${and} if your head explodes with dark forebodings too<br>
+${darkSide}</p>
+
+<p>${the} ${lunatic} ${head}<br>
+${the} ${lunatic} ${head}<br>
+You raise the blade, your make the change<br>
+You rearrange me 'til I'm sanse<br>
+${door}<br>
+${and} throw away the key<br>
+There's someone ${head} but it's not me</p>
+
+<p>${and} if the cloud bursts, thunder in your ear<br>
+You shout and no one seems to hear<br>
+${and} if the band you're in start playing differnt tunes<br>
+${darkSide}</p>
+
+`
 
 
 
