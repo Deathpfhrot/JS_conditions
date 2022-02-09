@@ -180,12 +180,9 @@ function adult(){
     if (number.value >= 18) {
         console.log(true);
         info.innerHTML = "volljährig"
-    } else if(number.value < 18) {
+    } else {
         console.log(false);
         info.innerHTML = "minderjährig"
-    } 
-    else {
-        
     }
 }
 
@@ -218,10 +215,74 @@ let ageCheck = document.getElementById('ageCheck')
 let ageValue = document.getElementById('input')
 
 function greaterThan() {
-        event.preventDefault();
+        event.preventDefault();//für die form zum blockieren des seiten refresh link?
     if (ageValue.value >= 18) {
         ageCheck.innerHTML = "Ja. Du kannst Shisha rauchen"
     } else {
         ageCheck.innerHTML = "Nein. Du darft nocht nicht Shisha rauchen"
     }
 }
+
+console.log("----------------------------");
+//JS Vertiefung lev2_2 condiitonal-statements-air-quality
+
+let rangeValue = document.getElementById('rangeValue')
+let rangeBar = document.getElementById('rangeBar')
+
+
+function checkAirQuality(){
+        
+    if(rangeBar.value > 50 && rangeBar.value < 100){
+        rangeValue.innerHTML = `Level of health concern: Moderate<br>
+        Level of health effect: Acceptable quality`
+        document.body.style.backgroundColor = 'blue';
+
+    } 
+    else if(rangeBar.value > 100 && rangeBar.value <= 150){
+        rangeValue.innerHTML = `Level of health concer: Unhealthy for sensitive groups<br>
+        Level of health effect: Generable publics not likely affected`
+        document.body.style.backgroundColor = 'green';
+
+    }
+    else{
+        rangeValue.innerHTML = `Level of health concern: Good<br>
+        Level of health effect: Little or no risk`
+        document.body.style.backgroundColor = 'orange';
+    }
+}
+
+console.log("-----------------------------");
+// lev2_3: condiitonal-statements difference
+
+let nummer = document.getElementById('nummer')
+let ergebnis = document.getElementById('ergebnis')
+
+function num(){
+    if (nummer.value > 27) {
+        let end = nummer.value - 27;
+        ergebnis.innerHTML = end * 2;
+        return;
+    } else {
+        ergebnis.innerHTML = nummer.value - 27;
+        return
+        console.log("Bye");
+    }
+}
+
+// lev2_4: condidotnal-statement punkten
+
+let sum;
+
+function zahlen(x, y){
+    if (x === y) {
+        sum = x + y
+        sum *= 5;
+        return sum;
+    } else {
+        sum = x + y;
+        return sum;
+    }
+}
+
+console.log(zahlen(5,5));
+

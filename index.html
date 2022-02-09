@@ -47,7 +47,18 @@
         <input type="button" value="Alter" onclick="greaterThan()" />
     </form>
     <h3 id="ageCheck"></h3>
-
+    <br>
+    <br>
+    <br>
+    <form action="">
+        <label for="rangeBar">Luft-Qualität(AQI: air-quality-index)</label>
+        <br>
+        <input type="range" min="0" max="150" id="rangeBar" onchange="checkAirQuality()">
+        <h2 id="rangeValue"></h2>
+    </form>
+    <h2>Zahlen vergleich</h2>
+    <input type="number" id="nummer" onchange="num()">
+    <h4 id="ergebnis"></h4>
 
 
     <script src="https://kit.fontawesome.com/6585d50100.js" crossorigin="anonymous"></script>
