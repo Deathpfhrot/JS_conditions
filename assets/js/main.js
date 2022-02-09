@@ -167,10 +167,61 @@ There's someone ${head} but it's not me</p>
 You shout and no one seems to hear<br>
 ${and} if the band you're in start playing differnt tunes<br>
 ${darkSide}</p>
-
 `
 
+console.log("--------------------------");
+// JS Vertiefung - Condiitonal Statements lvl1
+// lev1_1: conditional-statements punkten
 
+let number = document.getElementById('number')
+let info = document.getElementById('info')
 
+function adult(){
+    if (number.value >= 18) {
+        console.log(true);
+        info.innerHTML = "volljährig"
+    } else if(number.value < 18) {
+        console.log(false);
+        info.innerHTML = "minderjährig"
+    } 
+    else {
+        
+    }
+}
 
+// kürzer?
+console.log("----------------------------");
+//lev1_2: condiitonal-statements
 
+let weatherText = document.getElementById('weatherText')
+let weatherinfo = document.getElementById('weatherinfo')
+let weatherNumber = document.getElementById('weatherNumber')
+
+function weather(){
+    if (weatherNumber.value <= 3){
+        weatherinfo.innerHTML = "schlecht"
+    }
+    else if(weatherNumber.value <= 5) {
+        weatherinfo.innerHTML = "okey"
+    } else if(weatherNumber.value <= 7){
+        weatherinfo.innerHTML = "gut"
+    } else if(weatherNumber.value <= 10){
+        weatherinfo.innerHTML = "super"
+    }
+    else{
+    }
+}
+
+console.log("-----------------------------");
+// JS lev1_3: conditional statements mit form
+let ageCheck = document.getElementById('ageCheck')
+let ageValue = document.getElementById('input')
+
+function greaterThan() {
+        event.preventDefault();
+    if (ageValue.value >= 18) {
+        ageCheck.innerHTML = "Ja. Du kannst Shisha rauchen"
+    } else {
+        ageCheck.innerHTML = "Nein. Du darft nocht nicht Shisha rauchen"
+    }
+}
